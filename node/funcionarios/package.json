@@ -1,0 +1,21 @@
+{
+  "name": "funcionario",
+  "version": "1.0.0",
+  "description": "Aplicativo de Teste",
+  "main": "funcionarios.js",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "palavra1",
+    "palavra2"
+  ],
+  "author": "Bruno Sana",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "axios": "^0.18.0"
+  }
+}
