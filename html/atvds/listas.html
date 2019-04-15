@@ -1,0 +1,89 @@
+<h1>Listas</h1>
+
+<!--Listas Ordenadas - ol (Order List) com li (List Item)-->
+<h2>Listas</h2>
+
+<h4>Ordenadas</h4>
+<ol>
+    <li>Bruno</li>
+    <li>José Pedro</li>
+    <li>Sana</li>
+    <li>Larissa</li>
+</ol>
+
+<!--Lista não ordenada-->
+<h4>Não Ordenadas</h4>
+<ul>
+    <li>Queijo</li>
+    <li>Leite</li>
+    <li>Arroz</li>
+    <li>Pão</li>
+</ul>
+
+<!--Listas de Definição (Definition List)-->
+<h4>De Definição</h4>
+<dl>
+    <dt>BaaS</dt>
+    <dd>Backend Como Serviço</dd>
+    <dt>IaaS</dt>
+    <dd>InfraEstrutura como Serviço</dd>
+    <dt>PaaS</dt>
+    <dd>Plataforma como Serviço</dd>
+    <dt>SaaS</dt>
+    <dd>Software como Serviço</dd>
+</dl>
+
+<h2>Listas Aninhadas</h2>
+
+<h3>Ex: Projeto</h3>
+<ul class="tree">
+    <li>BackEnd
+        <ul>
+            <li><a href="app">App</a>
+                <ul id="app">
+                    <li>Produto.js</li>
+                    <li>Usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li><a href="config">Config</a>
+                    <ul id="config">
+                        <li>banco.js</li>
+                        <li>rotas.js</li>
+                        <li>Servidor.js</li>
+                    </ul>
+                </li>
+        </ul>
+    </li>
+    <li>Front End
+        <ul>
+                <li><a href="public">Public</a>
+                    <ul id="public">
+                        <li>app.css</li>
+                        <li>app.js</li>
+                        <li>index.html</li>
+                    </ul>
+                </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css"/>
+<style>
+    .Show{
+        display: none;
+    }
+</style>
+<script>
+document.getElementById("app").classList.add('Show');
+document.getElementById("config").classList.add('Show');
+document.getElementById("public").classList.add('Show');
+document.querySelectorAll('a').forEach(link =>{
+        link.onclick = function (e) {
+            e.preventDefault() //Evita que a navegação do click ocorra
+            let array = link.href.split('/')
+            console.log(array[array.length-1])
+            document.getElementById(array[array.length-1]).classList.toggle('Show')
+        }
+    })
+</script>
