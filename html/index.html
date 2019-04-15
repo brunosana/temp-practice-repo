@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividades</title>
+</head>
+<body>
+    <nav>
+        <!--Para interceptar o click do mouse: -->
+        <a href="atvds/teste.html">Primeiro Link</a><br>
+        <a href="atvds/temp.html">Segundo Link (Temp)</a>
+    </nav>
+    <section id="conteudo"></section>
+</body><br>
+<footer>Arquivos de estudos</footer>
+<script>
+    document.querySelectorAll('a').forEach(link =>{
+        link.onclick = function (e) {
+            e.preventDefault() //Evita que a navegação do click ocorra
+            const conteudo = document.getElementById('conteudo')
+            //Requisição ajax
+            fetch(link.href)
+                .then(resp => resp.text())
+                .then(html => conteudo.innerHTML = html)
+        }
+    })
+</script>
+</html>

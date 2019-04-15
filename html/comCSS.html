@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>HTML com CSS</title>
+        <link rel="stylesheet" href="referencia.css">
+        <!--Dentro dessa tag estará código CSS.
+            As três formas mais básicas de modificar com o css:
+            - Na própria tag
+            - Referenciar o arquivo pelo ID
+            - Por classe
+            Os dados são referenciados na própria tag-->
+        <style>
+            /*TAG*/
+            h1{
+                /*display: none;  - Some o elemento */
+                font-size: 50px;
+            }
+
+            .fundoPreto{
+                /*Pode colocar o nome ou o RGB
+                2 pra RED, 2 pra GREEN, 2 BLUE
+                Se os valores forem iguais, pode usar 1 dígito só
+                Ou rgb(255,0,0)*/
+                background-color: #000000;
+                color: #ffffff
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Título em H1</h1>
+        <span id="textoPrincipal">Texto em Span 1</span><br>
+        <span class="fundoPreto negrito">Texto em Span 2</span>
+        <span class="negrito">Texto em Span 2</span>
+        <!-- Atributo personalizado -->
+        <span wb-atrib></span>
+    </body>
+</html>
