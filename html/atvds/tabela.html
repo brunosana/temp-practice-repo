@@ -1,0 +1,66 @@
+
+<!-- thead - cabeçalho da tabela
+tr - Table Row
+th - Table Head
+td - Table Data -->
+<table>
+    <caption>
+        Produtos
+    </caption>
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Preco</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+
+    <tbody>
+            <tr>
+                    <td>iPad</td>
+                    <td>3288</td>
+                    <td>5</td>
+                    <td>16445</td>
+                </tr>
+                <tr>
+                    <td>Samsung S9</td>
+                    <td>2600</td>
+                    <td>1</td>
+                    <td>2600</td>
+                </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3" rowspan="2">Total</td>
+            <td>37637,67</td>
+        </tr>
+        <tr>
+            <td>Salve</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table{
+        border-collapse: collapse;
+    }
+
+    th, td{
+        padding: 10px;
+    }
+    thead tr{
+        border-bottom: solid 3px #444;
+    }
+
+    tbody tr:hover{
+        background-color: #dedede;
+    }
+    tfoot{
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+
+</style>
