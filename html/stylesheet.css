@@ -1,0 +1,14 @@
+nav{
+    padding: 10px;
+    margin: 10px;
+}
+
+nav a{
+    background-color: #0f0fff;
+    color: white;
+    border-style: double;
+    font-family: Helvetica;
+    font-style: normal;
+    margin: 10px;
+    padding: 10px;
+}
