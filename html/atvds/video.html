@@ -1,14 +1,28 @@
-<video id="meuvideo" width="500" controls autoplay controlsList="nodownload">
+<script>
+        function configurarVideo(id){
+            console.log("OLAA")
+            const video = document.getElementById(id);
+            //Botão direito do mouse no video não tem efeito
+            video.oncontextmenu = () => false;
+            
+            //Botão play
+            document.querySelector(`[wn-play=${id}]`).onclick = e => { video.play()
+            console.log("OI") }
+            }
+        configurarVideo("meuVideo");
+    </script>
+<video id="meuVideo" width="500" controls autoplay controlsList="nodownload">
     <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4"/>
     <p>Seu browser não suporta :/</p>
 </video>
 <div wm-progresso="meuvideo" class="progresso">
-    <div></div>
+    <div>
+    </div>
 </div>
 
 <div>
-    <button wm-play="">Play</button>
-    <button wm-pause="">Pause</button>
+    <button wm-play="meuVideo">Play</button>
+    <button wm-pause="meuVideo">Pause</button>
 </div>
 
 <style>
@@ -16,5 +30,12 @@
         height: 20px;
         width: 500px;
         border: solid 1px #444;
+        background-color: red;
+    }
+    .progresso > div{
+        text-align: right;
+        color: white;
+        font-size: 14px;
+        width: 0%;
     }
 </style>
